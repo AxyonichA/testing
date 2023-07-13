@@ -1,0 +1,101 @@
+@media (max-width: 768px) {
+	:root {
+		font-size: 14px;
+	// CONTAINER 
+		--padding-container: 16px;
+		--padding-section: 48px;
+	// CONTAINER 
+	}
+
+	// EXPERIENCE
+	.experience {
+		&__header {
+			display: none;
+		}
+		&__header-mobile {
+			display: block;
+		}
+		&__info {
+			&-counters {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	}
+	// EXPERIENCE 
+
+	// WORK-STAGES
+	.work-stages {
+		&__info {
+			gap: 8px;
+		}
+		&__item {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+	// WORK-STAGES
+
+
+// PROJECTS
+	.projects {
+		padding-top: var(--padding-section);
+		&__header {
+			margin-bottom: 20px;			
+		}
+		&__container {
+			display: block;			
+		}
+	}
+// PROJECTS
+
+// SLICK-SLIDER
+.slick-slider {
+	position: relative;
+}
+.slick-track {
+	display: flex;
+	gap: 20px;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-slide {
+	flex-basis: 252px;
+}
+.slick-arrow {
+	z-index: 10;
+	position: absolute;
+	height: 328px;
+	width: 60px;
+	font-size: 0;
+	background-color: transparent;
+}
+.slick-prev {
+	left: 0;
+	top: 0;
+}
+.slick-next {
+	right: 0;
+	top: 0;
+}
+// SLICK-SLIDER
+
+	// ORDER-FORM
+	.order-form {	
+		&__form {
+			grid-column: 7 / 13;
+			display: flex;
+			flex-direction: column;		
+		}
+		&__text {
+			padding-top: 20px;
+		}
+		&__inputs {
+			width: 100%;		
+		}
+	}
+	// ORDER-FORM
+
+}

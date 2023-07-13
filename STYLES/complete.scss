@@ -1,0 +1,135 @@
+@import url(reset.css);
+
+:root {
+// COLORS
+	--main: #212529;
+	--accent: #DDD7C0;
+	--active: #CBC6B2;
+	--error: #E13A3A;
+	--success: #F9C67B;
+	--bg-white: #FFF;
+// COLORS
+
+// TEXT
+	--text-fz-large: 18px;
+	--text-fz-normal: 16px;
+	--text-fz-specific: 12px;
+	--text-weight-bold: 700;
+// TEXT
+
+// FONTS
+	--basic: Roboto;
+	--headings: Helvetica;
+// FONTS
+
+}
+
+// MIXINS
+@mixin grid-template($cols) {
+	display: grid;
+	grid-template-columns: repeat($cols, 1fr);
+	column-gap: 20px;
+}
+// MIXINS
+
+html {
+	color: var(--main)
+	
+}
+body {
+	font-size: var(--text-fz-normal);
+	font-family: var(--basic);
+}
+h1 {
+	font-size: 4.5rem;
+	font-family: var(--headings);
+	line-height: 120%;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 3rem;
+	font-family: var(--headings);
+	line-height: 120%;
+}
+h3 {
+	font-size: 2.25rem;
+	font-family: var(--headings);
+	line-height: 120%;
+}
+.container {
+	padding-left: calc(50% - 720px);
+	padding-right: calc(50% - 720px);
+}
+.button__submit {
+	padding: 12px 20px;
+	background: var(--main);	
+	color: var(--bg-white);
+	line-height: 140%;
+	transition: 0.2s;
+	&:hover, &:focus {
+		background: var(--accent);
+		color: var(--main);
+		outline: none;
+	}
+	&:active {
+		background: var(--active);
+		color: var(--main)
+	}
+}
+.order-project {
+	font-family: Roboto;
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--main);
+	&:hover {
+		border-bottom: 1px solid var(--accent)
+	}
+	&:active {
+		border-bottom: 1px solid var(--active)
+	}
+}
+.input {
+	&:focus {
+		outline: none;
+		border-bottom: 1px solid var(--active);
+	}	
+	border: none;
+	border-bottom: 1px solid var(--main);
+	padding: 12px 0;
+	transition: all 0.3s;
+	&::placeholder {
+		font-family: var(--basic);
+		color: var(--main);
+	}
+}
+.input-invalid {
+	border-bottom: 1px solid var(--error);
+}
+.error {
+	font-size: var(--text-fz-large);
+	color: var(--error);
+}
+.burger {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	right: 0;
+	z-index: 10;
+	overflow: hidden;
+	span {
+		width: 30px;
+		height: 2px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #222;
+		transition: all 0.5s;
+	}
+	span:nth-of-type(2) {
+		top: calc(50% - 5px);
+	}
+	span:nth-of-type(3) {
+		top: calc(50% + 5px);
+	}
+}
+@import 'tv-extralargescreens', 'largescreens-and-desktops', 'smallscreens-and-laptops', 'tablets', 'mobile';

@@ -1,0 +1,267 @@
+@media (max-width: 768px) {
+	:root {
+		font-size: 14px;
+	// CONTAINER 
+		--padding-container: 16px;
+		--padding-section: 60px;
+	// CONTAINER 
+	}
+	h1 {
+		font-size: 32px;
+		font-family: var(--headings);
+		line-height: 120%;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 26px;
+		font-family: var(--headings);
+		line-height: 120%;
+	}
+	h3 {
+		font-size: 24px;
+		font-family: var(--headings);
+		line-height: 120%;
+	}
+	// HEADER
+	.header {
+		padding-top: 8px;
+		&__logo {
+			svg {
+				width: 40px;
+				height: 40px;
+			}			
+		}
+		&__nav {
+			overflow: hidden;
+			position: fixed;
+			width: 100%;
+			background: white;
+			top: 0;
+			right: 0;
+			padding: 16px;
+			transform: translateX(100%);
+			transition: transform 0.5s;			
+		}
+		&__nav.active {
+			transform: translateX(0%);			
+		}
+		&__contacts {
+			align-self: center;			
+		}
+	}
+	.burger {
+		display: block;
+		position: fixed;
+		right: 24px;
+	}
+	.burger.active span:nth-of-type(1) {
+		display: none;
+	}
+	.burger.active span:nth-of-type(2) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(45deg);
+	}
+	.burger.active span:nth-of-type(3) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(-45deg);
+	}
+	// HEADER
+
+	// TOP
+	.top {
+		padding-top: 69px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		h1 {
+			order: 1;
+		}
+		.order-project {
+			order: 3;
+			margin: 4px 0px;
+			width: fit-content;
+			justify-self: right;
+			align-self: flex-start;
+		}
+		&__text {
+			order: 2;
+			font-size: 16px;
+			line-height: 140%;
+		}
+		.image-container {
+			order: 4;
+			position: relative;
+			width: 100%;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+	// TOP
+
+	// EXPERIENCE
+	.experience {
+		padding-top: var(--padding-section);
+		display: flex;
+		flex-direction: column;
+		&__header {
+			grid-column: 1 / 6;
+		}
+		&__info {
+			grid-column: 7 / 11;
+			display: flex;
+			flex-direction: column;
+			padding-top: 20px;
+			gap: 32px;
+			&-more {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+			&-text {
+				font-size: var(--text-fz-normal);
+				line-height: 140%;
+			}
+			&-counters {
+				width: auto;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				&-item {
+					width: 161px;
+					font-size: var(--text-fz-normal);
+					line-height: 140%;
+				}
+			}
+		}
+	}
+	// EXPERIENCE 
+
+	// WORK-STAGES
+	.work-stages {
+		padding-top: var(--padding-section);
+		display: flex;
+		flex-direction: column;
+		&__header {
+			grid-column: 1 / 2;
+		}
+		&__info {
+			grid-column: 2 / 3;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			padding-top: 20px;
+			&-text {
+				max-width: 325px;
+			}
+		}
+		&__items {
+			display: flex;
+			flex-direction: column;
+			margin-top: 8px;
+		}
+		&__item {
+			@include grid-template(2);
+			border-bottom: 1px solid var(--main);
+			padding: 20px 0;
+			&-header {
+			}
+			&-text {
+				padding-top: 0;
+			}
+		}
+	}
+	// WORK-STAGES
+
+	// PROJECTS
+	.projects {
+		padding-top: var(--padding-section);
+		&__header {
+			margin-bottom: 20px;			
+		}
+		&__container {
+			display: block;			
+		}
+	}
+// PROJECTS
+
+// SLICK-SLIDER
+.slick-slider {
+	position: relative;
+}
+.slick-track {
+	display: flex;
+	gap: 20px;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slick-slide {
+	flex-basis: 252px;
+}
+.slick-arrow {
+	z-index: 10;
+	position: absolute;
+	height: 328px;
+	width: 60px;
+	font-size: 0;
+	background-color: transparent;
+}
+.slick-prev {
+	left: 0;
+	top: 0;
+}
+.slick-next {
+	right: 0;
+	top: 0;
+}
+// SLICK-SLIDER
+	// REVIEWS
+	.reviews {
+		padding-top: var(--padding-section);
+		&__header {
+			margin-bottom: 20px;
+		}
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;			
+		}
+	}
+	// REVIEWS
+
+	// ORDER-FORM
+	.order-form {
+		display: flex;
+		flex-direction: column;	
+		&__img {
+			display: none;	
+		}
+		&__text {
+			padding-top: 20px;
+		}
+		&__inputs {
+			padding-top: 32px;		
+		}
+		.button__submit {
+			margin-top: 20px;			
+		}
+		&__download {
+			padding-top: 28px;
+		}
+	}
+	// ORDER-FORM
+
+	// FOOTER
+	.footer {
+		padding-top: 60px;
+		padding-bottom: 20px;
+		&__rights {
+			margin-top: 4px;
+		}
+	}
+	// FOOTER
+
+}

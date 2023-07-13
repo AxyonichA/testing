@@ -1,0 +1,18 @@
+@media (max-width: 1200px) {
+	:root {
+	// CONTAINER 
+		--padding-container: 32px;
+		--padding-section: 100px;
+	// CONTAINER 
+	}
+	
+// TOP
+.top {
+	&__image-additional {
+		position: absolute;
+		bottom: 0;
+		display: none;
+	}
+}
+}
+// TOP
